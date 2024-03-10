@@ -67,6 +67,8 @@ C) 14
 
 D) 12
 
+Opção correta: alternativa A.
+
 ______
 
 **4)** Como você criaria um método `acelerar()` em uma classe `Carro`, que recebe um parâmetro `velocidade` e o adiciona a um atributo `velocidadeAtual`?
@@ -79,6 +81,8 @@ C) ![Uma imagem](assets/ex04_3.PNG)
 
 D) ![Uma imagem](assets/ex04_4.PNG)
 
+Opção correta: alternativa A.
+
 ______
 
 **5)** Qual a forma correta de definir uma classe Carro em JavaScript, com um método ligar() e um atributo marca?
@@ -90,6 +94,8 @@ B) ![Uma imagem](assets/ex05_2.PNG)
 C) ![Uma imagem](assets/ex05_3.PNG)
 
 D) ![Uma imagem](assets/ex05_4.PNG)
+
+Opção correta: alternativa A.
 
 ______
 
