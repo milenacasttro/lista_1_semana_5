@@ -113,6 +113,7 @@ C) "João Maria"
 
 D) "undefined undefined"
 
+Opção correta: alternativa A.
 ______
 
 # Questões dissertativas
@@ -129,6 +130,24 @@ Criando e manipulando Animais:
 - Para cada animal, chame o método descrever() para ver a descrição no console.
 
 Dica: Utilize `console.log()` para exibir as informações!
+
+```javascript
+class Animal {
+  constructor (nome, idade){
+    this.nome = nome;
+    this.idade = idade;
+  }
+  descrever () {
+    console.log (`Descrição do animal: \n Nome: ${this.nome}; \n Idade: ${this.idade} anos.`);
+  }
+}
+
+const animal1 = new Animal ("Cachorro", "5");
+const animal2 = new Animal ("Gato", "2");
+
+animal1.descrever();
+animal2.descrever();
+```
 
 ______
 
@@ -155,6 +174,35 @@ Chamando os Métodos:
 
 Dica: Utilize console.log() para exibir as informações!
 
+```javascript
+class Animal {
+    constructor (nome, idade){
+      this.nome = nome;
+      this.idade = idade;
+    }
+    descrever () {
+      console.log (`Descrição do animal: \n Nome: ${this.nome}; \n Idade: ${this.idade} anos.`);
+    }
+  }
+
+class Gato extends Animal {
+    constructor (nome, idade, cor) {
+        super (nome, idade); 
+        this.cor = cor;
+    } 
+
+    miar() {
+        console.log (`O ${this.nome} faz "Miau".`)
+    }
+}
+
+const animal1 = new Animal ("Cachorro", "5");
+const animal2 = new Gato ("Gato", "2", "preto");
+
+animal1.descrever();
+animal2.descrever();
+animal2.miar();
+```
 
 ______
 
