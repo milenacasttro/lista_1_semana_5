@@ -226,26 +226,32 @@ Chamando o Método para Ver o Total:
 Dica: Utilize console.log() para exibir as informações!
 
 ```javascript
+// Cria a classe somadorDeNotas 
 class SomadorDeNotas {
     constructor (total) {
-        this.total = 0;
+        this.total = 0; // Inicia o total como zero quando um novo objeto é criado
     }
 
+    // Método que adiciona o valor da nota ao total
     adicionarNotas (nota) {
         this.total += nota;
     }
 
+    // Método que tem como objetivo imprimir no console a soma de todas as notas adicionadas
     verTotal () {
-        console.log (`Soma Total das Notas: ${this.total}`);
+        console.log (`Soma Total das Notas: ${this.total}`); // imprime no console
     }
 }
 
+// Cria uma variável e instancia um objeto da classe SomadorDeNotas
 let somador = new SomadorDeNotas();
 
+// Adiciona notas ao somador
 somador.adicionarNotas (5);
 somador.adicionarNotas (7);
 somador.adicionarNotas (8);
 
+// Exibe o total das notas no console
 somador.verTotal();
 ```
 ______
