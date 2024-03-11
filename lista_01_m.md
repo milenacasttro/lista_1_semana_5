@@ -226,7 +226,7 @@ Chamando o Método para Ver o Total:
 Dica: Utilize console.log() para exibir as informações!
 
 ```javascript
-// Cria a classe somadorDeNotas 
+// Define a classe somadorDeNotas 
 class SomadorDeNotas {
     constructor (total) {
         this.total = 0; // Inicia o total como zero quando um novo objeto é criado
@@ -274,3 +274,43 @@ Agora, sua tarefa é escrever um código em JavaScript que crie as classes Funci
 - Para cada objeto, chame o método calcularSalario() e mostre o salário calculado no console.
 
 Certifique-se de explicar cada parte do código utilizando comentários, explicando para que serve cada atributo e método, bem como a lógica por trás do cálculo de salário para o tipo de funcionário Professor.
+
+```javascript
+// Define a classe funcionário
+class Funcionario {
+    constructor (nome, idade, salarioBase) {
+        this.nome = nome;
+        this.idade = idade;
+        this.salarioBase = salarioBase;
+    }
+
+    calcularSalario () {
+      // Método que calcula o salário total de um funcionário e é especifíco para cada cargo
+    }    
+}
+
+// Define a classe Professor que herda da classe Funcionario
+class Professor extends Funcionario {
+    constructor (nome, idade, salarioBase, disciplina, horasDeAulaSemana) {
+        super (nome, idade, salarioBase); // atributos herdados
+        this.disciplina = disciplina;
+        this.horasDeAulaSemana = horasDeAulaSemana;
+    }
+
+    // Metódo que calcula o salário total do professor 
+    calcularSalario () {
+        // Imprime no console a disciplina dada pelo professor, seu nome e o seu salário calculado através da multiplicação do salário pelo número de aulas semanais 
+        console.log (`Professor(a) de ${this.disciplina} \n Nome: ${this.nome} \n Salário: ${this.salarioBase * this.horasDeAulaSemana} reais.`);
+    }
+
+}
+
+// Cria dois objetos do tipo Professor com os atributos necessários
+let professor1 = new Professor ("Daniel Silva", 25, 60, "Matemática", 18);
+let professor2 = new Professor ("Mariana Araújo", 40, 65,"Química", 20);
+
+// Calcula e imprime no console as informações do professor e seu salário 
+professor1.calcularSalario();
+professor2.calcularSalario();
+```
+
