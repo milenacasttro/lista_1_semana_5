@@ -132,19 +132,24 @@ Criando e manipulando Animais:
 Dica: Utilize `console.log()` para exibir as informações!
 
 ```javascript
+// Define a classe Animal 
 class Animal {
-  constructor (nome, idade){
+  constructor (nome, idade) {
     this.nome = nome;
     this.idade = idade;
   }
+
+  // Cria um método para descrever o animal, exibindo seu nome e idade no console
   descrever () {
     console.log (`Descrição do animal: \n Nome: ${this.nome}; \n Idade: ${this.idade} anos.`);
   }
 }
 
+// Cria dois objetos da classe Animal com os atributos necesários
 const animal1 = new Animal ("Cachorro", "5");
 const animal2 = new Animal ("Gato", "2");
 
+// Chama o método descrever para os dois objetos criados
 animal1.descrever();
 animal2.descrever();
 ```
@@ -175,32 +180,43 @@ Chamando os Métodos:
 Dica: Utilize console.log() para exibir as informações!
 
 ```javascript
+// Define a classe Animal
 class Animal {
     constructor (nome, idade){
       this.nome = nome;
       this.idade = idade;
     }
+
+    // Cria um método para descrever o animal, exibindo seu nome e idade no console
     descrever () {
       console.log (`Descrição do animal: \n Nome: ${this.nome}; \n Idade: ${this.idade} anos.`);
     }
   }
 
+// Define a classe Gato que herda da classe da classe Animal
 class Gato extends Animal {
     constructor (nome, idade, cor) {
-        super (nome, idade); 
+        super (nome, idade); // atributos herdados
         this.cor = cor;
     } 
 
+    // Cria método que imprime no console o nome do animal e o som que ele faz
     miar() {
         console.log (`O ${this.nome} faz "Miau".`)
     }
 }
 
+// Cria um objeto da classe Animal com os atributos necessários
 const animal1 = new Animal ("Cachorro", "5");
+
+// Cria um objeto da classe Gato com os atributos necessários
 const animal2 = new Gato ("Gato", "2", "preto");
 
+// Chama o método descrever para os dois objetos criados
 animal1.descrever();
 animal2.descrever();
+
+// Chama o método miar para o objeto da classe gato
 animal2.miar();
 ```
 
@@ -299,7 +315,7 @@ class Professor extends Funcionario {
 
     // Metódo que calcula o salário total do professor 
     calcularSalario () {
-        // Imprime no console a disciplina dada pelo professor, seu nome e o seu salário calculado através da multiplicação do salário pelo número de aulas semanais 
+        // Imprime no console a disciplina dada pelo professor, seu nome e o seu salário calculado através da multiplicação do salário base pelo número de aulas semanais 
         console.log (`Professor(a) de ${this.disciplina} \n Nome: ${this.nome} \n Salário: ${this.salarioBase * this.horasDeAulaSemana} reais.`);
     }
 
